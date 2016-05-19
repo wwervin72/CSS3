@@ -15,28 +15,29 @@ body{
 	background-color: #000;
 	opacity: .5;
 	filter: alpha(opacity = 50);
-	/*transform-style: preserve-3d;*/
 }
-.path-sun{
+.path-Saturn, .path-earth, .path-Venus, .path-Neptune, .path-Jupiter, .path-Mercury, .path-satellite, .path-moon{
 	position: absolute;
 	width: 95%;
 	height: 95%;
-	margin-top: 2.5%;
-	margin-left: 2.5%;
+	top: 2.5%;
+	left: 2.5%;
 	border: 1px solid #ddd;
 	border-radius: 50%;
 	transform: rotateX(60deg);
+	transform-style: preserve-3d;
 }
-#sun{
-	width: 100px;
-	height: 100px;
+#sun, #earth, #Saturn, #Venus, #Neptune, #Jupiter, #Mercury, #satellite, #moon{
+	width: 160px;
+	height: 160px;
 	position: absolute;
 	transform-style: preserve-3d;
 	top: 50%;
 	left: 50%;
-	margin: -50px 0 0 -50px;
+	margin: -80px 0 0 -80px;
 	animation: rotatesun 10s linear infinite;
 	cursor: pointer;
+	transform: translateZ(-80px);
 }
 /*x, y, z轴*/
 .x, .y, .z{  
@@ -61,44 +62,442 @@ body{
 	}
 }
 .space{
-	width: 100px;
-	height: 100px;
+	width: 160px;
+	height: 160px;
 	position: absolute;
 	border: 1px solid #999;
-	box-shadow: 0 0 100px rgba(255, 79, 0, 1);
+	box-shadow: 0 0 100px rgba(218, 21, 4, 1);
 	border-radius: 50%;
 	transform-origin: 50% 50%;
-	background-color: rgba(255, 79, 0, 0.2);
+	background-color: rgba(218, 21, 4, 1);
 }
 .space-x1, .space-x2, .space-y1, .space-y2, .space-z1, .space-z2{
 	width: 87.5%;
 	height: 87.5%;
 	top: 6.25%;
 	left: 6.25%;
-	transform: rotate3d(0, 0, 0, 0deg) translateZ(25px);
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(40px);
 }
 .space-x1{
-	transform: rotate3d(0, 0, 0, 0deg) translateZ(-25px);
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-40px);
 }
-
-
-.space-y, .space-y1, .space-y2{
+.space-y{
 	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
 }
 .space-y1{
-	transform: rotate3d(0, 1, 0, 90deg) translateZ(-25px);
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-40px);
 }
 .space-y2{
-	transform: rotate3d(0, 1, 0, 90deg) translateZ(25px);
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(40px);
 }
-
-
-.space-z, .space-z1, .space-z2{
+.space-z{
 	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
 }
 .space-z1{
-	transform: rotate3d(1, 0, 0, 90deg) translateZ(-25px);
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-40px);
 }
 .space-z2{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(40px);
+}
+
+
+/*Saturn*/
+#Saturn{
+	width: 80px;
+	height: 80px;
+	left: 0%;
+	margin: -40px 0 0 -40px;
+	animation: rotatesun 8s linear infinite;
+	transform: translateZ(-40px);
+}
+#Saturn .space{
+	width: 80px;
+	height: 80px;
+	box-shadow: 0 0 60px rgba(90, 80, 53, 1);
+	background-color: rgba(90, 80, 53, 1);
+}
+#Saturn .space-x1, #Saturn .space-x2, #Saturn .space-y1, #Saturn .space-y2, #Saturn .space-z1, #Saturn .space-z2{
+	width: 87.5%;
+	height: 87.5%;
+	top: 6.25%;
+	left: 6.25%;
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(20px);
+}
+#Saturn .space-x1{
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-20px);
+}
+#Saturn .space-y{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
+}
+#Saturn .space-y1{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-20px);
+}
+#Saturn .space-y2{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(20px);
+}
+#Saturn .space-z{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
+}
+#Saturn .space-z1{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-20px);
+}
+#Saturn .space-z2{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(20px);
+}
+
+/*earth*/
+.path-earth{
+	width: 70%;
+	height: 70%;
+	top: 15%;
+	left: 15%;
+}
+#earth{
+	width: 20px;
+	height: 20px;
+	left: 0%;
+	margin: -10px 0 0 -10px;
+	animation: rotatesun 8s linear infinite;
+	transform: translateZ(-10px);
+}
+#earth .space{
+	width: 20px;
+	height: 20px;
+	box-shadow: 0 0 30px rgba(161, 187, 246, 1);
+	background-color: rgba(161, 187, 246, .5);
+}
+#earth .space-x1, #earth .space-x2, #earth .space-y1, #earth .space-y2, #earth .space-z1, #earth .space-z2{
+	width: 87.5%;
+	height: 87.5%;
+	top: 6.25%;
+	left: 6.25%;
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(5px);
+}
+#earth .space-x1{
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-5px);
+}
+#earth .space-y{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
+}
+#earth .space-y1{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-5px);
+}
+#earth .space-y2{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(5px);
+}
+#earth .space-z{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
+}
+#earth .space-z1{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-5px);
+}
+#earth .space-z2{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(5px);
+}
+
+
+/*Venus*/
+.path-Venus{
+	width: 60%;
+	height: 60%;
+	top: 20%;
+	left: 20%;
+}
+#Venus{
+	width: 28px;
+	height: 28px;
+	left: 0%;
+	margin: -14px 0 0 -14px;
+	animation: rotatesun 8s linear infinite;
+	transform: translateZ(-14px);
+}
+#Venus .space{
+	width: 28px;
+	height: 28px;
+	box-shadow: 0 0 20px rgba(251, 212, 111, 1);
+	background-color: rgba(251, 212, 111, 1);
+}
+#Venus .space-x1, #Venus .space-x2, #Venus .space-y1, #Venus .space-y2, #Venus .space-z1, #Venus .space-z2{
+	width: 87.5%;
+	height: 87.5%;
+	top: 6.25%;
+	left: 6.25%;
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(7px);
+}
+#Venus .space-x1{
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-7px);
+}
+#Venus .space-y{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
+}
+#Venus .space-y1{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-7px);
+}
+#Venus .space-y2{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(7px);
+}
+#Venus .space-z{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
+}
+#Venus .space-z1{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-7px);
+}
+#Venus .space-z2{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(7px);
+}
+
+
+
+
+/*Neptune*/
+.path-Neptune{
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+}
+#Neptune{
+	width: 32px;
+	height: 32px;
+	left: 0%;
+	margin: -16px 0 0 -16px;
+	animation: rotatesun 8s linear infinite;
+	transform: translateZ(-16px);
+}
+#Neptune .space{
+	width: 32px;
+	height: 32px;
+	box-shadow: 0 0 20px rgba(97, 147, 232, 1);
+	background-color: rgba(97, 147, 232, .5);
+}
+#Neptune .space-x1, #Neptune .space-x2, #Neptune .space-y1, #Neptune .space-y2, #Neptune .space-z1, #Neptune .space-z2{
+	width: 87.5%;
+	height: 87.5%;
+	top: 6.25%;
+	left: 6.25%;
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(8px);
+}
+#Neptune .space-x1{
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-8px);
+}
+#Neptune .space-y{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
+}
+#Neptune .space-y1{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-8px);
+}
+#Neptune .space-y2{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(8px);
+}
+#Neptune .space-z{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
+}
+#Neptune .space-z1{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-8px);
+}
+#Neptune .space-z2{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(8px);
+}
+
+/*Jupiter*/
+.path-Jupiter{
+	width: 85%;
+	height: 85%;
+	top: 7.5%;
+	left: 7.5%;
+}
+#Jupiter{
+	width: 100px;
+	height: 100px;
+	left: 0%;
+	margin: -50px 0 0 -50px;
+	animation: rotatesun 8s linear infinite;
+	transform: translateZ(-50px);
+}
+#Jupiter .space{
+	width: 100px;
+	height: 100px;
+	box-shadow: 0 0 20px rgba(179, 85, 24, 1);
+	background-color: rgba(179, 85, 24, 1);
+}
+#Jupiter .space-x1, #Jupiter .space-x2, #Jupiter .space-y1, #Jupiter .space-y2, #Jupiter .space-z1, #Jupiter .space-z2{
+	width: 87.5%;
+	height: 87.5%;
+	top: 6.25%;
+	left: 6.25%;
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(25px);
+}
+#Jupiter .space-x1{
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-25px);
+}
+#Jupiter .space-y{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
+}
+#Jupiter .space-y1{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-25px);
+}
+#Jupiter .space-y2{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(25px);
+}
+#Jupiter .space-z{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
+}
+#Jupiter .space-z1{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-25px);
+}
+#Jupiter .space-z2{
 	transform: rotate3d(1, 0, 0, 90deg) translateZ(25px);
+}
+
+
+
+/*Mercury*/
+.path-Mercury{
+	width: 40%;
+	height: 40%;
+	top: 30%;
+	left: 30%;
+}
+#Mercury{
+	width: 16px;
+	height: 16px;
+	left: 0%;
+	margin: -8px 0 0 -8px;
+	animation: rotatesun 8s linear infinite;
+	transform: translateZ(-8px);
+}
+#Mercury .space{
+	width: 16px;
+	height: 16px;
+	box-shadow: 0 0 20px rgba(179, 85, 24, 1);
+	background-color: rgba(179, 85, 24, 1);
+}
+#Mercury .space-x1, #Mercury .space-x2, #Mercury .space-y1, #Mercury .space-y2, #Mercury .space-z1, #Mercury .space-z2{
+	width: 87.5%;
+	height: 87.5%;
+	top: 6.25%;
+	left: 6.25%;
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(4px);
+}
+#Mercury .space-x1{
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-4px);
+}
+#Mercury .space-y{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
+}
+#Mercury .space-y1{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-4px);
+}
+#Mercury .space-y2{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(4px);
+}
+#Mercury .space-z{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
+}
+#Mercury .space-z1{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-4px);
+}
+#Mercury .space-z2{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(4px);
+}
+
+
+/*satellite*/
+.path-satellite{
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+}
+#satellite{
+	width: 16px;
+	height: 16px;
+	left: 0%;
+	margin: -8px 0 0 -8px;
+	animation: rotatesun 8s linear infinite;
+	transform: translateZ(-8px);
+}
+#satellite .space{
+	width: 16px;
+	height: 16px;
+	box-shadow: 0 0 20px rgba(104, 104, 104, 1);
+	background-color: rgba(104, 104, 104, 1);
+}
+#satellite .space-x1, #satellite .space-x2, #satellite .space-y1, #satellite .space-y2, #satellite .space-z1, #satellite .space-z2{
+	width: 87.5%;
+	height: 87.5%;
+	top: 6.25%;
+	left: 6.25%;
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(4px);
+}
+#satellite .space-x1{
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-4px);
+}
+#satellite .space-y{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
+}
+#satellite .space-y1{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-4px);
+}
+#satellite .space-y2{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(4px);
+}
+#satellite .space-z{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
+}
+#satellite .space-z1{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-4px);
+}
+#satellite .space-z2{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(4px);
+}
+
+/*moon*/
+.path-moon{
+	width: 300%;
+	height: 300%;
+	top: -100%;
+	left: -100%;
+}
+#moon{
+	width: 4px;
+	height: 4px;
+	left: 0%;
+	margin: -4px 0 0 -4px;
+	animation: rotatesun 8s linear infinite;
+	transform: translateZ(-4px);
+}
+#moon .space{
+	width: 4px;
+	height: 4px;
+	box-shadow: 0 0 20px rgba(104, 104, 104, 1);
+	background-color: rgba(104, 104, 104, 1);
+}
+#moon .space-x1, #moon .space-x2, #moon .space-y1, #moon .space-y2, #moon .space-z1, #moon .space-z2{
+	width: 87.5%;
+	height: 87.5%;
+	top: 6.25%;
+	left: 6.25%;
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(1px);
+}
+#moon .space-x1{
+	transform: rotate3d(0, 0, 0, 0deg) translateZ(-1px);
+}
+#moon .space-y{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(0px);
+}
+#moon .space-y1{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(-1px);
+}
+#moon .space-y2{
+	transform: rotate3d(0, 1, 0, 90deg) translateZ(1px);
+}
+#moon .space-z{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(0px);
+}
+#moon .space-z1{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(-1px);
+}
+#moon .space-z2{
+	transform: rotate3d(1, 0, 0, 90deg) translateZ(1px);
 }
